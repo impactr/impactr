@@ -1,9 +1,10 @@
 %h1 Listing donations
 
-%table
+%table.table
   %tr
     %th Amount
     %th Campaign
+    %th Donor
     %th
     %th
     %th
@@ -11,7 +12,8 @@
   - @donations.each do |donation|
     %tr
       %td= donation.amount
-      %td= donation.campaign
+      %td= donation.campaign.name
+      %td= donation.donor.name
       %td= link_to 'Show', donation
       %td= link_to 'Edit', edit_donation_path(donation)
       %td= link_to 'Destroy', donation, :method => :delete, :data => { :confirm => 'Are you sure?' }

@@ -41,7 +41,7 @@ Impactr::Application.configure do
     :port => 25,
     :domain => "http://impactr.herokuapp.com",
     :authentication => :plain,
-    :user_name => ENV["sendgrd_username"],
+    :user_name => ENV["sendgrid_username"],
     :password => ENV["sendgrid_password"]
   }
 end

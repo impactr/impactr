@@ -5,7 +5,10 @@
   = @donation.amount
 %p
   %b Campaign:
-  = @donation.campaign
+  = @donation.campaign.name
+%p
+  %b Donor:
+  = @donation.donor.name
 
 = link_to 'Edit', edit_donation_path(@donation)
 \|

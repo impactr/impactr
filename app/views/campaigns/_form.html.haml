@@ -10,10 +10,11 @@
     = f.label :name
     = f.text_field :name
   .field
-    = f.label :organization_id
-    = f.number_field :organization_id
+    = f.label :organization
+    = f.collection_select :organization_id, Organization.order(:name),:id,:name, include_blank: true
+
   .field
-    = f.label :unit
+    = f.label 'impact unit'
     = f.text_field :unit
   .actions
     = f.submit 'Save'
