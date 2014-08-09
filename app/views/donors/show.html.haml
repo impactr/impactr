@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Email:
+  = @donor.email
+%p
+  %b Name:
+  = @donor.name
+%p
+  %b Venmo:
+  = @donor.venmo_id
+
+= link_to 'Edit', edit_donor_path(@donor)
+\|
+= link_to 'Back', donors_path
