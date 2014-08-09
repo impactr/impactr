@@ -26,4 +26,16 @@ Impactr::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true #try to force sending in development
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.smtp_settings = {
+    :address => "smtp.sendgrid.net",
+    :port => 587,
+    :domain => "http://impactr.herokuapp.com",
+    :authentication => 'plain',
+    :user_name => ENV["sendgrid_username"],
+    :password => ENV["sendgrid_password"]
+  }
 end
