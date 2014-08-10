@@ -12,9 +12,9 @@ namespace :db do
     mspca = Organization.create name: 'MSPCA'
     water = Organization.create name: 'Water.org'
 
-    puppies = Campaign.create organization: mspca, name: 'Spay the Puppies', unit: 'pups have been spayed'
-    kittens = Campaign.create organization: mspca, name: 'Spay the Kitties', unit: 'kitties haven been spayed'
-    peru = Campaign.create organization: water, name: 'Rural Peru', unit: 'gallons of water have been provided'
+    puppies = Campaign.create organization: mspca, name: 'Spay the Puppies', unit: 'pups have been spayed', total_impact: rand(10..120)
+    kittens = Campaign.create organization: mspca, name: 'Spay the Kitties', unit: 'kitties haven been spayed', total_impact: rand(10..120)
+    peru = Campaign.create organization: water, name: 'Rural Peru', unit: 'gallons of water have been provided', total_impact: rand(10..120)
 
     Donation.create donor: a, campaign: puppies, amount: 250
     Donation.create donor: b, campaign: puppies, amount: 150
@@ -22,6 +22,20 @@ namespace :db do
     Donation.create donor: d, campaign: puppies, amount: 1000
     Donation.create donor: e, campaign: puppies, amount: 400
     Donation.create donor: f, campaign: puppies, amount: 500
+
+    Donation.create donor: a, campaign: kittens, amount: 250
+    Donation.create donor: b, campaign: kittens, amount: 150
+    Donation.create donor: c, campaign: kittens, amount: 400
+    Donation.create donor: d, campaign: kittens, amount: 1000
+    Donation.create donor: e, campaign: kittens, amount: 400
+    Donation.create donor: f, campaign: kittens, amount: 500
+
+    Donation.create donor: a, campaign: peru, amount: 250
+    Donation.create donor: b, campaign: peru, amount: 150
+    Donation.create donor: c, campaign: peru, amount: 400
+    Donation.create donor: d, campaign: peru, amount: 1000
+    Donation.create donor: e, campaign: peru, amount: 400
+    Donation.create donor: f, campaign: peru, amount: 500
 
   end
 end

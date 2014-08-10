@@ -7,6 +7,8 @@ Impactr::Application.routes.draw do
 
   resources :donors
 
+  get "complete_task:id" => "campaigns#complete"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

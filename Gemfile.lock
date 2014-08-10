@@ -38,9 +38,6 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.2)
     builder (3.1.4)
-    byebug (2.5.0)
-      columnize (~> 0.3.6)
-      debugger-linecache (~> 1.2.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -48,20 +45,20 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.1)
-    columnize (0.3.6)
-    debugger-linecache (1.2.0)
-    dotenv (0.9.0)
-    dotenv-rails (0.9.0)
-      dotenv (= 0.9.0)
+    dotenv (0.11.1)
+      dotenv-deployment (~> 0.0.2)
+    dotenv-deployment (0.0.2)
+    dotenv-rails (0.11.1)
+      dotenv (= 0.11.1)
     erubis (2.7.0)
     execjs (2.2.1)
     haml (4.0.5)
       tilt
-    haml-rails (0.4)
-      actionpack (>= 3.1, < 4.1)
-      activesupport (>= 3.1, < 4.1)
-      haml (>= 3.1, < 4.1)
-      railties (>= 3.1, < 4.1)
+    haml-rails (0.5.3)
+      actionpack (>= 4.0.1)
+      activesupport (>= 4.0.1)
+      haml (>= 3.1, < 5.0)
+      railties (>= 4.0.1)
     hike (1.2.3)
     i18n (0.6.11)
     jbuilder (1.5.3)
@@ -109,6 +106,7 @@ GEM
       rdoc (~> 4.0, < 5.0)
     sendgrid (1.2.0)
       json
+      json
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -135,7 +133,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  byebug
   coffee-rails (~> 4.0.0)
   dotenv-rails
   haml-rails

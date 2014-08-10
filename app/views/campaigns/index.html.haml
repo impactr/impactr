@@ -12,7 +12,7 @@
   - @campaigns.each do |campaign|
     %tr
       %td= campaign.name
-      %td= campaign.organization.name
+      / %td= campaign.organization.name
       %td= campaign.unit
       %td= link_to 'Show', campaign
       %td= link_to 'Edit', edit_campaign_path(campaign)
