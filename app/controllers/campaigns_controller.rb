@@ -37,6 +37,13 @@ class CampaignsController < ApplicationController
     end
   end
 
+  def complete 
+    campaign = Campaign.find(params[:id])
+    campaign.update_attributes(completed: true)
+    campaign.calculate_campaign_impact
+    redirect_to campaign_path(params[:id])
+  end
+
   # PATCH/PUT /campaigns/1
   # PATCH/PUT /campaigns/1.json
   def update
