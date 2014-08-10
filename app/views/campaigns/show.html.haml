@@ -1,14 +1,17 @@
 %p#notice= notice
 
-%p
-  %b Name:
+%h1
   = @campaign.name
 %p
   %b Organization:
   = @campaign.organization.name
 %p
-  %b Unit:
+  %b Impact Unit:
   = @campaign.unit
+
+%h2 Donations
+= render '/donations/donations', donations: @campaign.donations
+
 
 = link_to 'Edit', edit_campaign_path(@campaign)
 \|
